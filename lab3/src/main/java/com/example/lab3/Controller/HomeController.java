@@ -1,4 +1,4 @@
-package com.example.lab3;
+package com.example.lab3.Controller;
 
 import org.aspectj.lang.annotation.DeclareWarning;
 import org.springframework.stereotype.Controller;

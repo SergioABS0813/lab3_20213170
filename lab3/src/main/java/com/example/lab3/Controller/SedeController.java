@@ -1,6 +1,7 @@
 package com.example.lab3.Controller;
 
 import com.example.lab3.Entity.Sede;
+import com.example.lab3.Entity.Veterinario;
 import com.example.lab3.Repository.SedeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,14 +28,17 @@ public class SedeController {
     }
 
     @GetMapping(value = {"/mostrarMascotas"})
-    public String mostrarMascotas(){
+    public String mostrarMascotas(@RequestParam("id") int id){
 
         return "sede/mostrarMascotas";
 
     }
 
     @GetMapping(value = {"/mostrarVeterinarios"})
-    public String mostrarVeterinarios(@RequestParam()){
+    public String mostrarVeterinarios(@RequestParam("id") int id,
+                                      Model model){
+        List<Veterinario> listaVeterinarios = 
+        model.addAttribute("listaVeterinarios", listaVeterinarios);
 
         return "sede/mostrarVeterinarios";
 
